@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sami — Contact Info</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: #00f5d4;
+    }
+
+    .subtitle {
+      color: #b8b8d1;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+
+    /* ---- ONE LINE ROW ---- */
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      max-width: 100%;
+      padding: 10px 5px 25px 5px;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      width: 78px;
+      height: 78px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      transition: transform 0.15s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+      border: 2px solid rgba(255,255,255,0.12);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Tooltip label */
+    .card::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.62rem;
+      letter-spacing: 1px;
+      color: #d0d0e8;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Killer Colors */
+    .linkedin  { background: #0A66C2; }
+    .fiverr    { background: #1DBF73; }
+    .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .facebook  { background: #1877F2; }
+    .tiktok    { background: #010101; }
+    .github    { background: #333; }
+    .portfolio { background: #FF6B00; }
+    .whatsapp  { background: #25D366; }
+    .email     { background: #EA4335; }
+
+    .card i { pointer-events: none; }
+
+    .card:hover {
+      filter: brightness(1.2);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+    }
+
+    footer {
+      margin-top: 25px;
+      color: #6a6a8e;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Small screens: allow scroll */
+    @media (max-width: 750px) {
+      h1 { font-size: 1.6rem; }
+      .card { width: 65px; height: 65px; font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Abdul <span>Sami</span></h1>
+  <p class="subtitle">Full Stack Developer &amp; Digital Marketer</p>
+
+  <!-- SAB EK LINE MEIN -->
+  <div class="row">
+
+    <!-- LinkedIn -->
+    <a class="card linkedin" href="https://www.linkedin.com/in/abdul-sami-764b923b5/" target="_blank" data-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- Fiverr -->
+    <a class="card fiverr" href="https://www.fiverr.com/abdulsami967" target="_blank" data-label="Fiverr">
+      <i class="fab fa-fiverr"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a class="card instagram" href="https://www.instagram.com/Choudrysami.1" target="_blank" data-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a class="card facebook" href="https://www.facebook.com/MarkitingFundas" target="_blank" data-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a class="card tiktok" href="https://www.tiktok.com/@sami" target="_blank" data-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="card github" href="https://github.com/choudrysamikhan1911-maker" target="_blank" data-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <!-- Portfolio -->
+    <a class="card portfolio" href="https://choudrysamikhan1911-maker.github.io/sami_dashboard/" target="_blank" data-label="Portfolio">
+      <i class="fas fa-globe"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a class="card whatsapp" href="https://wa.me/923296191358" target="_blank" data-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Email -->
+    <a class="card email" href="mailto:Choudrysamikhan1911@gmail.com" data-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+  </div>
+
+  <footer>Sami — All Rights Reserved</footer>
+
+</body>
+</html>
